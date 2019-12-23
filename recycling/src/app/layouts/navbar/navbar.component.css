@@ -1,0 +1,42 @@
+.nav1{
+    height: 70px;
+    background: #75c060   ;
+}
+.p1{
+    padding-left: 4%;
+    padding-top: 2%;
+    font-size: 14px;
+}
+.p2{
+    padding-left: 20%;
+    padding-top: 2%;
+    font-size: 14px;
+}
+.map{
+    border: 1px dashed #75c060;
+    font-size: 40px;
+    padding: 15%;
+    border-radius: 20%;
+    color: #75c060 ;
+}
+.menu{
+    margin-left: 0%
+}
+.med{ 
+    margin-left: 25%;
+}
+.h2{
+      font-size: 17px;
+}
+.media1{
+     margin-top: 0%;
+}
+.navbar{
+    height: 75px;
+} 
+a.icon:hover{
+    color: #75c060 !important 
+}
+.icon1{
+    color: #75c060 !important
+} 

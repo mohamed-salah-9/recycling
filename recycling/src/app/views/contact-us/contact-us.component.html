@@ -1,0 +1,102 @@
+
+
+<section class="container-fluid img-total " style="background-image: url('assets/fff.jpg'); height: 300px;">
+    <span class="page-title-overlay"></span>
+    <div class="container">
+        <div class="body-total ">
+            <h3 class="text-white font-weight-bolder h3-total ">Contact Us</h3>
+            <div class="row p-a-total">
+                <div class=""><a class="m-0 btn text-white font-weight-bolder ancor-total " routerLink="/">Home &nbsp;
+                        -</a></div>
+                <p class="p-0 mt-2 color-total ">Contact Us</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!---contact-us--->
+<section class="container-fluid  body-contact ">
+    <div class="container">
+        <div class="row">
+            <div class="col-4 row">
+                <div class="row pb-0">
+                    <div><i class="fas fa-home color-total i-contact"></i></div>
+                    <div class="pl-4">
+                        <h3 class="font-weight-bolder">Address</h3>
+                        <p class="p-contact pt-2">The 5th Settlement , cairo , egypt</p>
+                    </div>
+                </div>
+                <div class="row pt-0  pb-0">
+                        <div><i class="fas fa-headphones-alt i-contact color-total "></i></div>
+                        <div class="pl-4">
+                            <h3 class="font-weight-bolder">Phone</h3>
+                            <p class="p-contact pt-2 pb-0 mb-0">Phone: (+141)286763478</p>
+                            <p class="p-contact pt-0">Whatsapp: (+141)286763478</p>
+                        </div>
+                </div>
+                <div class="row pt-0">
+                        <div><i class="far fa-envelope i-contact color-total"></i></div>
+                        <div class="pl-4">
+                            <h3 class="font-weight-bolder">Address</h3>
+                            <p class="p-contact pt-2 pb-0 mb-0">Email: support@mosalah.com</p>
+                            <p class="p-contact pt-0">Skype: support.mosalah</p>
+                        </div>
+                </div>
+            </div>
+            <div class="col-8">
+                    <form #myForm="ngForm"  (ngSubmit)='AddMyproduct(myForm.value)' class="bg-contact p-5">
+                            <h2 class="text-center font-weight-bolder text-white h2-contact">contact us</h2>
+                            <div class="form-row pt-4">
+                                <div class="form-group col-md-6">
+                                    <label  class="label-contact" for="inputEmail4 ">Name</label>
+                                    <input type="text" class="form-control" id="inputname4" placeholder="your name"
+                                    ngModel name="name" #name="ngModel" required>
+                                    <div  
+                                     *ngIf="name.invalid && name.touched">
+                                     The field is required.
+                                    </div> 
+                                </div> 
+                                <div class="form-group col-md-6">
+                                    <label class="label-contact" for="inputPassword4">Phone</label>
+                                    <input type="number" class="form-control" id="inputemail4" placeholder="your phone"
+                                    ngModel name="phone" #phone="ngModel" required>
+                                    <div  
+                                     *ngIf="phone.invalid && phone.touched">
+                                     The field is required.
+                                    </div> 
+                                </div>
+                            </div>
+                            <div class="">
+                                    <div class="form-group">
+                                        <label class="label-contact" for="inputEmail4">Address</label>
+                                        <input type="text" class="form-control" id="inputname4" placeholder="your Address"
+                                        ngModel name="address" #address="ngModel" required>
+                                        <div *ngIf="address.invalid && address.touched">
+                                            The field is required.
+                                        </div>
+                                    </div> 
+                            </div>
+                            <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                        <label class="label-contact" for="inputEmail4">Product Type</label>
+                                        <input type="text" class="form-control" id="inputname4" placeholder="your Product Type" name="product_Type" ngModel>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label class="label-contact" for="inputPassword4">Product weight</label>
+                                        <input type="number" class="form-control" id="inputemail4" placeholder="your Product weight" name="product_weight" ngModel>
+                                        
+                                    </div>
+                            </div>
+                            <div class="form-group">
+                                    <label class="label-contact" for="exampleFormControlTextarea1">More Message</label>
+                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="your Message ..." name="details" ngModel></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-secondary pl-5 pr-5 mt-3 font-weight-bolder"
+                            [disabled]="myForm.invalid"
+                            >Send Me</button>
+                    </form> 
+            </div>
+        </div>
+    </div>
+</section>
+

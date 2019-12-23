@@ -1,0 +1,31 @@
+.img-total{
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    position: relative;
+    }
+    .page-title-overlay {
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        background: rgba(0,0,0,0.6);
+    }
+    .body-total{
+        position: absolute;
+        top: 30%;
+        left: 40%;
+    } 
+    .ancor-total:hover{
+        color:#75c060 !important  
+    }
+    .color-total{
+        color:#75c060 
+    }
+    .p-a-total{
+        margin-left: 0;
+    }
+    .h3-total{
+        font-size: 45px;
+    }

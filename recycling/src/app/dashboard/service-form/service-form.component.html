@@ -1,0 +1,12 @@
+<form #myForm="ngForm"  (ngSubmit)='addservice(myForm.value)'>
+    <h2 class="text-center font-weight-bolder">Add Service</h2>
+    <div class="form-group">
+      <label class="font-weight-bolder">Services_Name</label>
+      <input type="email" class="form-control" placeholder="Service Name" name="services_name" ngModel>
+    </div>
+    <div class="form-group">
+      <label  class="font-weight-bolder">Services_Details</label>
+      <textarea class="form-control" rows="3" placeholder="Service Details" name="services_details" ngModel></textarea>
+    </div>
+    <button type="submit" class="btn btn-success">Add</button>
+  </form>

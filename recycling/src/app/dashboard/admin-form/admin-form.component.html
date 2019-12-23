@@ -1,0 +1,78 @@
+<section class=" container min-high mt-3" *ngIf="AD.admindata.type_ == 1">
+        <h2 class="text-center">Registration</h2>
+        <form #myForm="ngForm"  (ngSubmit) = "addadmin(myForm.value)">
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="inputEmail4">Name</label>
+                    <input type="text" class="form-control"  placeholder="your name"
+                    ngModel name="name" #name="ngModel" required>
+                    <div  
+                    *ngIf="name.invalid && name.touched">
+                        Invalid name
+                    </div> 
+                </div> 
+                <div class="form-group col-md-6">
+                    <label for="inputPassword4">Email</label>
+                    <input type="email" class="form-control"  placeholder="your email"
+                    ngModel name="email" #email="ngModel" required email>
+                    <div *ngIf ="email.errors?.required && email.touched">
+                     No email
+                    </div>
+                    <div *ngIf ="email.errors?.email && email.touched">
+                     Invalid email
+                    </div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="inputEmail4">Password</label>
+                    <input type="password" class="form-control" placeholder="your password"
+                    ngModel name="password" #password="ngModel" required minlength="6" maxlength="20">
+                    <div *ngIf="password.errors?.required && password.touched">
+                      No Pass
+                    </div>
+                    <div *ngIf="password.errors?.minlength && password.touched">
+                      Invalid Password
+                    </div>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="inputPassword4">Comfirm Password</label>
+                    <input type="password" class="form-control"  placeholder="Comfirm Password"
+                    ngModel name="confirmpassword" #confirmpassword="ngModel" required >
+                    <div *ngIf="confirmpassword.errors?.required && confirmpassword.touched">
+                        No Pass
+                    </div>
+                    <div *ngIf="password.value!=confirmpassword.value && confirmpassword.touched">
+                      Invalid Password
+                    </div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    <label for="inputEmail4">Age</label>
+                    <input type="number" class="form-control"  placeholder="your Address"
+                    ngModel name="age" #age="ngModel" required>
+                    <div *ngIf="age.errors?.required && age.touched">
+                    No age
+                    </div>
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="inputPassword4">Phone</label>
+                    <input type="number" class="form-control"  placeholder="your phone"
+                    ngModel name="phone" #phone="ngModel" required number>
+                    <div *ngIf="phone.errors?.required && phone.touched">
+                            No Phone
+                    </div> 
+                </div>
+                <div class="form-group col-md-4">
+                        <label for="inputEmail4">Type</label>
+                        <input type="number" class="form-control" placeholder="your Address"
+                        ngModel name="type_" #type_="ngModel" required>
+                       
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary"
+            [disabled]="myForm.invalid || password.value!=confirmpassword.value"
+            >Sign up</button>
+        </form>
+    </section>

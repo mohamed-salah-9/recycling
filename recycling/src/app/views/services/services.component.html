@@ -1,0 +1,43 @@
+
+
+<section class="container-fluid img-total " style="background-image: url('assets/fff.jpg'); height: 300px;">
+    <span class="page-title-overlay"></span>
+    <div class="container">
+        <div class="body-total ">
+            <h3 class="text-white font-weight-bolder h3-total ">Services</h3>
+            <div class="row p-a-total">
+                <div class=""><a class="m-0 btn text-white font-weight-bolder ancor-total " routerLink="/">Home &nbsp;
+                        -</a></div>
+                <p class="p-0 mt-2 color-total ">Services</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!----services----->
+<section class="services pt-100 pb-50" id="services">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-6 mx-auto text-center">
+                <div class="section-title mb-100">
+                    <p>what i can do</p>
+                    <h4 class="font-weight-bolder">my services</h4>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <p *ngIf = "services?.length == 0 ; else x">empty</p>
+            <ng-template #x>
+            <div class="col-lg-4 col-md-6" *ngFor='let serv of services'>
+                <div class="single-service">
+                    <img src="assets/006.png">
+                    <h4 class="font-weight-bolder">{{serv.services_name}}</h4>
+                    <p class="text-secondary">{{serv.services_details}}</p>
+                </div>
+           </div>
+           </ng-template>
+        </div>
+    </div>
+</section>
+

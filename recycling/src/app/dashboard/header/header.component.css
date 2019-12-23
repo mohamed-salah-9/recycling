@@ -1,0 +1,29 @@
+.navbar {
+   
+    font-size: 14px;
+    background-color: #1c2b36;
+    font-family: sans-serif;
+}
+.text-logo{
+    color: #209e91 !important;
+    font-size: 28px;
+    padding: 0;
+}
+.form-control {
+    font-size: 14px;
+    height: 30px;
+}
+   
+.btn {
+    font-size: 12px;
+        height: 30px;
+}
+.menu{
+    background: #1c2b36;
+    height: 600px;
+    border-top: 1px solid black;
+}
+a.ancor:hover{
+    background: #209e91;
+    color: white !important;  
+}

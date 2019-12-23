@@ -1,0 +1,17 @@
+.bg-color{
+    background: #75c060;
+}
+
+.ancor-event{
+    font-size: 25px;
+}
+.ancor2-event{
+    color: #75c060;
+    text-transform: uppercase;
+}
+.ancor2-event:hover{
+    color: black;
+}
+.small-event{
+    margin-left: 40%;
+}

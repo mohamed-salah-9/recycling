@@ -1,0 +1,17 @@
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">phone</th>
+        <th scope="col">product_Type</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor='let x of MyData'>
+        <td><a routerLink="{{x._id}}">{{x.name}}</a></td>
+        <td>{{x.phone}}</td>
+        <td>{{x.product_Type}}</td>
+      </tr>
+    </tbody>
+  </table> 
+  <router-outlet></router-outlet>
